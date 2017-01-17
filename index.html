@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/" />
+    <meta charset="utf-8">
+    <title>Aaron Erb | Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta content="" >
+    <meta name="description" content="Aaron Erb's Web Development Portfolio">
+    <meta name="keywords" content="Development, Front-End, Aaron Erb, Porfolio">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <script src="assets/js/vendors/jquery2.2.0.min.js"></script>
+    <script src="assets/js/vendors/angular.js"></script>
+    <script src="assets/js/vendors/angular-route.js"></script>
+    <script src="assets/js/angularApp.js"></script>
+    <script src="assets/js/vendors/wow.min.js"></script>
+    <script>
+      wow = new WOW(
+          {
+          boxClass:     'wow',      // default
+          animateClass: 'animated', // default
+          offset:       0,          // default
+          mobile:       true,       // default
+          live:         true        // default
+        }
+        )
+        wow.init();
+    </script>
+  </head>
+<body ng-app="tabs">
+  <div id="pageLoader" class="showLoader">
+    <div id="loader"></div>
+  </div>
+  <!--Main Navigation-->
+  <div id="nav" class="wow slideInLeft" ng-controller="TabController as tabCtrl">
+    <ul>
+        <a href=""><li>
+            <p id="navButton" onclick="navToggle()">&#xf0c9;</p>
+        </li></a>
+        <div id="container" class="show" data-wow-delay="1s">
+          <div class="wrapper">
+            <a class="navClick" href="/about" onclick="mobNavToggle()"><li ng-class="{active: $route.current.activetab == 1}">&#xf015;</li></a>
+            <a class="navClick" href="/work" onclick="mobNavToggle()"><li ng-class="{active: $route.current.activetab == 2}">&#xf07c;</li></a>
+            <a class="navClick" href="/contact" onclick="mobNavToggle()"><li ng-class="{active: $route.current.activetab == 3}">&#xf27a;</li></a>
+          </div>
+      </div>
+      <div id="social">
+        <div class="wrapper">
+          <a href="https://www.linkedin.com/in/aaron-erb-26421772" target="_blank"><li>&#xf08c;</li></a>
+          <a href="https://www.facebook.com/aaron.erb.96" target="_blank"><li>&#xf230;</li></a>
+          <a href="https://www.twitter.com/webdesigner_ace" target="_blank"><li>&#xf081;</li></a>
+        </div>
+      </div>
+    </ul>
+  </div>
+  <div id="home" class="row">
+    <ng-view></ng-view>
+  </div>
+  <div class="pens">
+    <a href="http://codepen.io/Erbnlegend/" target="_blank"><button>View my Pens</button></a>
+  </div>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/progress.js"></script>
+<script src="assets/js/galleryHover.js"></script>
+</body>
+</html>

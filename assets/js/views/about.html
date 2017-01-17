@@ -1,0 +1,23 @@
+<div class="row">
+<div id="about" class="col-5 col-m-12">
+<h1 class="wow slideInDown">Aaron <br />Christopher <br /> Erb</h1>
+<p class="wow slideInLeft">
+  Front End Developer / Designer
+</p>
+<div class="wow rubberBand">
+<a id="contactButton" class="navClick" href="/contact">Contact Me</a>
+</div>
+</div>
+<div class="col-1"></div>
+<div id="skill" class="col-5 col-m-11">
+  <div id="svg" class="wow bounceIn" ng-repeat="skill in skillCtrl.langs">
+    <svg id="{{skill.lang}}" onmouseover="hover(this.id)" onmouseout="out(this.id)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="25 25 160 170" preserveAspectRatio="none">
+        <circle class="stroke svg-{{skill-lang}}" cx="100" cy="115" r="57" fill="none"  stroke-width="10" stroke-dasharray="{{skill.mastery *2 /200 *360}} , 250" transform="rotate(-90,100,100)" />
+        <circle cx="100" cy="115" r="57" fill="none" stroke="rgba(100,100,100, .2)"  stroke-width="10" stroke-dasharray="1000 , 20000" transform="rotate(-90,100,100)" />
+        <text class="text-{{skill.lang}}" text-anchor="middle" x="112" y="117" style="font-size: 36px;" >{{skill.mastery}}%</text>
+        <text class="text-{{skill.lang}}" text-anchor="middle" x="112" y="185" style="font-size: 26px;" >{{skill.lang}}</text>
+    </svg>
+  </div>
+</div>
+<div class="col-1"></div>
+</div>

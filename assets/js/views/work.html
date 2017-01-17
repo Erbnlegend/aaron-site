@@ -1,0 +1,20 @@
+<div id="gallery">
+    <div id="container">
+      <div ng-repeat="img in galCtrl.images">
+        <div class="row section">
+          <div class="item col-5">
+            <div class="overlay">
+              <a href="http://{{img.site}}" target="_blank" ><button>View</button></a>
+            </div>
+          <img ng-src="{{img.imgsrc}}" />
+          </div>
+        <div class="col-7">
+          <h1>{{img.name}}</h1>
+          <p>
+            {{img.description}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
